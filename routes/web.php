@@ -23,6 +23,9 @@ Route::group(['middleware'=>'web','namespace'=>'admin'],function()
 
 });
 
-Auth::routes();
-
+// Auth::routes();
+Route::group(['namespace'=>'Auth'],function()
+{
+	Route::any('login','LoginController@index');
+});
 Route::get('/home', 'HomeController@index')->name('home');

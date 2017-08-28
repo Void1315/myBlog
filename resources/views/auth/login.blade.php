@@ -1,69 +1,57 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minimal and Clean Sign up / Login and Forgot Form by FreeHTML5.co</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="{{asset('css/login/goolfont.css')}}" rel='stylesheet' type='text/css'>
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+    <link rel="stylesheet" href="{{asset('css/default/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/login/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('css/login/style.css')}}">
+    <!-- Modernizr JS -->
+    <script src="{{asset('js/login/modernizr-2.6.2.min.js')}}"></script>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
+    </head>
+    <body class="style-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-push-8">
+                    <!-- Start Sign In Form -->
+                    <form action="{{url('login')}}" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
+                        <h2>该登陆了</h2>
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
+                            <label for="username" class="sr-only">登录邮箱</label>
+                            <input type="email" class="form-control" id="email" placeholder="登录邮箱" autocomplete="off">
                         </div>
-
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
+                            <label for="password" class="sr-only">登录密码</label>
+                            <input type="password" class="form-control" id="password" placeholder="登录密码" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="remember"><input type="checkbox" id="remember"> 记住我 </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Sign In" class="btn btn-primary">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-@endsection
+    <!-- jQuery -->
+    <script src="{{asset('js/default/jquery-2.1.3.min.js')}}"></script>
+    <!-- Bootstrap -->
+    <script src="{{asset('js/default/bootstrap.min.js')}}"></script>
+    <!-- Placeholder -->
+    <script src="{{asset('js/login/jquery.placeholder.min.js')}}"></script>
+    <!-- Waypoints -->
+    <script src="{{asset('js/login/jquery.waypoints.min.js')}}"></script>
+    <!-- Main JS -->
+    <script src="{{asset('js/login/main.js')}}"></script>
+    </body>
+</html>
+
