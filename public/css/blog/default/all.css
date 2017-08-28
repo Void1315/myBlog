@@ -1,0 +1,16 @@
+.article-footer
+{
+    border-top: 1px solid #ddd;
+    margin-top: 25px;
+    padding-top: 15px;
+}
+.tage-box
+{
+	display: flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+.tage-head
+{
+    padding-right: 10px;
+}
