@@ -4,7 +4,7 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Minimal and Clean Sign up / Login and Forgot Form by FreeHTML5.co</title>
+    <title>登录管理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -22,19 +22,29 @@
             <div class="row">
                 <div class="col-md-4 col-md-push-8">
                     <!-- Start Sign In Form -->
-                    <form action="{{url('login')}}" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
+                    <form action="{{url('/login')}}" method="post" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
                         <h2>该登陆了</h2>
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="username" class="sr-only">登录邮箱</label>
-                            <input type="email" class="form-control" id="email" placeholder="登录邮箱" autocomplete="off">
+                            <input type="email" class="form-control" id="email" name='email' placeholder="登录邮箱" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="password" class="sr-only">登录密码</label>
-                            <input type="password" class="form-control" id="password" placeholder="登录密码" autocomplete="off">
+                            <input type="password" class="form-control" id="password" name='password' placeholder="登录密码" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label for="remember"><input type="checkbox" id="remember"> 记住我 </label>
+                            <label for="remember"><input type="checkbox" id="remember" name="remember"> 记住我 </label>
                         </div>
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="form-group">
                             <input type="submit" value="Sign In" class="btn btn-primary">
                         </div>

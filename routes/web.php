@@ -14,18 +14,17 @@
 
 Route::group(['middleware'=>'web','namespace'=>'blog'],function()
 {
-	Route::get('/', 'IndexController@index');
+	Route::get('/', 'IndexController@index')->name('/');
 
 });
-Route::group(['middleware'=>'web','namespace'=>'admin'],function()
+Route::group(['middleware'=>'auth','namespace'=>'admin'],function()
 {
-	Route::get('rua','AdminController@index');
-
+	Route::get('admin','AdminController@index')->name('admin');
 });
 
 // Auth::routes();
 Route::group(['namespace'=>'Auth'],function()
 {
-	Route::any('login','LoginController@index');
+	Route::any('login','LoginController@index')->name('login');
 });
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
