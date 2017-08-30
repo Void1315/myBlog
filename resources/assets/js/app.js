@@ -14,10 +14,18 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
 import Example from './components/Tag.vue'
+import Editor from './components/Editor.vue'
+import Mas from './components/Mas.vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+Vue.use(ElementUI)
+
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('tage',Example);
-
+Vue.component('editor',Editor);
+Vue.component('mas',Mas);
 const app = new Vue({
     el: '#app'
 });

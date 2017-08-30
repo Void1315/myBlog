@@ -3,12 +3,12 @@
 		<a href="#subPages" data-toggle="collapse" class="{{$nav['word']['word']?'active':'collapsed'}}"><i class="lnr lnr-file-empty"></i> <span>文章管理</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 		<div id="subPages" class="collapse {{$nav['word']['word'] or ''}}">
 			<ul class="nav">
-				<li><a href="#" class="{{$nav['word']['release'] or ''}}" >
-					<i class="lnr lnr-home"></i>发布文章</a>
+				<li><a href="{{url('word')}}" class="{{$nav['word']['release'] or ''}}" >
+					<i class="lnr lnr-file-add"></i>发布文章</a>
 				</li>
 				<li>
 					<a href="#" class="{{$nav['word']['config'] or ''}}" >
-						<i class="lnr lnr-pencil"></i>管理文章
+						<i class="lnr lnr-cog"></i>管理文章
 					</a>
 				</li>
 				<li>

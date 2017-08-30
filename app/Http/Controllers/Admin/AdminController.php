@@ -10,6 +10,6 @@ class AdminController extends Controller
     //
     public function index()
     {
-    	return view('admin/index')->with('nav',$this->navSelect('word_config'));
+    	return view('admin/index')->with('nav',$this->navSelect('index'));
     }
 }

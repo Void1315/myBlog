@@ -34,6 +34,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('web');
         $this->middleware('guest');
     }
     protected function login($request)//登录逻辑
@@ -45,7 +46,7 @@ class LoginController extends Controller
             'remember'=>'boolean'
             ]);
         if($UserModel->login($request))
-            return redirect('admin');
+            return redirect()->route('admin');
         else
             return redirect()->route('login')->with('errors','邮箱或密码错误');
     }
