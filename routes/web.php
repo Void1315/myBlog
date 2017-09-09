@@ -12,17 +12,18 @@
 */
 
 
-Route::group(['middleware'=>'web','namespace'=>'blog'],function()
+Route::group(['middleware'=>'web','namespace'=>'Blog'],function()
 {
 	Route::get('/', 'IndexController@index')->name('/');
 
 });
-Route::group(['middleware'=>'auth','namespace'=>'admin'],function()
+Route::group(['middleware'=>'auth','namespace'=>'Admin'],function()
 {
 	Route::get('admin','AdminController@index')->name('admin');
 	Route::any('word','WordController@index')->name('word');
 	Route::any('wordconfig','WordController@config')->name('wordconfig');
 	Route::any('image','ImageController@index')->name('image');
+	Route::any('tages','TageController@index')->name('tages');
 });
 
 // Auth::routes();

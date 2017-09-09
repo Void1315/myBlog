@@ -1,11 +1,14 @@
 <template>
 	<div class="tag-div">
-		<a href=""  class="tag-a color-1 "  :style="{'background-color':'{{mmessage}}'}">{{mmessage}}</a>
+		<a href=""  class="tag-a"  :style="{'background-color':color}">
+        <span class="tag-head" :style="{'border-right-color':color}"></span>
+        {{mmessage}}
+        </a>
 	</div>
 </template>
 <script>
     export default {
-        props: ['mmessage'],
+        props: ['mmessage','color'],
         data()
         {
             return {
@@ -23,6 +26,16 @@
 {
 	
 }
+.tag-head
+{
+    border: 9px solid transparent;
+    content: " ";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: -18px;
+}
 .tag-a{
 	display: inline-block;
     text-decoration: none;
@@ -38,16 +51,7 @@
     margin: 5px 9px 5px 8px;
     font-family: Menlo,Monaco,Andale Mono,lucida console,Courier New,monospace;
 }
-.tag-a:before 
-{
-    border: 9px solid transparent;
-    content: " ";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: -18px;
-}
+
 .tag-a:after
 {
 	content: " ";
@@ -59,9 +63,5 @@
     position: absolute;
     top: 7px;
     left: 2px;
-}
-.color-1:before
-{
-    border-right-color: black;
 }
 </style>

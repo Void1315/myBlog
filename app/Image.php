@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Image extends Model
 {
@@ -18,8 +19,8 @@ class Image extends Model
     {
     	if ($request->file('image')) 
     	{
-            $path = $request->image->store('image');
-            return ['data'=>storage_path($path)];
+            $path = 'app/'.$request->image->store('image');
+            return ['data'=>[url(Storage::url($path))]];
 		}
         else
             return false;

@@ -36,6 +36,6 @@
 			</ul>
 		</div>
 	</li>
-	<li><a href="#" class="{{$nav['tage'] or ''}}"><i class="lnr lnr-bookmark"></i><span>标签管理</span></a></li>
+	<li><a href="{{url('tages')}}" class="{{$nav['tage'] or ''}}"><i class="lnr lnr-bookmark"></i><span>标签管理</span></a></li>
 	<li><a href="#" class="{{$nav['config'] or ''}}" ><i class="lnr lnr-cog"></i> <span>账号管理</span></a></li>
 <li><a href="####" class="{{$nav['about'] or ''}}"><i class="lnr lnr-smile"></i> <span>关于本站</span></a></li>

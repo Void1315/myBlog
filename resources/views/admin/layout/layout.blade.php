@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
 	<title>Dashboard | Klorofil - Free Bootstrap Dashboard Template</title>
 	<meta charset="utf-8">
@@ -84,13 +84,15 @@
 		</div>
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
-		@yield('index')
-		@yield('word')
-		@yield('word_config')
-		@yield('image')
-		@yield('video')
-		@yield('tage')
-		@yield('config')
+			<div id='app'>
+				@yield('index')
+				@yield('word')
+				@yield('word_config')
+				@yield('image')
+				@yield('video')
+				@yield('tage')
+				@yield('config')
+			</div>
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
 		<footer>

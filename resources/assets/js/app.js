@@ -20,12 +20,18 @@ import Editor from './components/Editor.vue'
 import Mas from './components/Mas.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
-Vue.use(ElementUI)
+import HeadImage from './components/HeadImage.vue'
+import Ylook from './components/Ylook.vue'
+import TageSerch from './components/TageSerch.vue'
 
+Vue.use(ElementUI)
+Vue.component('tage-serch',TageSerch);
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('tage',Example);
 Vue.component('editor',Editor);
 Vue.component('mas',Mas);
+Vue.component('y-look',Ylook);
+Vue.component('headimage',HeadImage);
 const app = new Vue({
     el: '#app'
 });

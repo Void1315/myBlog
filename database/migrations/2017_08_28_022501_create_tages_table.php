@@ -16,7 +16,7 @@ class CreateTagesTable extends Migration
         //
         Schema::create('tages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('content','10');
+            $table->string('tage_content','10');
             $table->string('color','10');
             $table->softDeletes();
             $table->timestamps();
