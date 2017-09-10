@@ -84,7 +84,6 @@
 		</div>
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
-			<div id='app'>
 				@yield('index')
 				@yield('word')
 				@yield('word_config')
@@ -92,7 +91,6 @@
 				@yield('video')
 				@yield('tage')
 				@yield('config')
-			</div>
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
 		<footer>

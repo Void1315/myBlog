@@ -1,7 +1,7 @@
 @extends('admin.layout.layout')
 
 @section('index')
-<div class="main">
+<div class="main" id='app'>
 	<!-- MAIN CONTENT -->
 	<div class="main-content">
 		<div class="container-fluid">

@@ -1,6 +1,6 @@
 @extends('admin.layout.layout')
 @section('word')
-<div class="main">
+<div class="main" id='app'>
 	<!-- MAIN CONTENT -->
 		<div class="main-content" id="app">
 			<div class="container">
