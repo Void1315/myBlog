@@ -18,6 +18,8 @@ class CreateArticleTageTable extends Migration
             $table->increments('id');
             $table->integer('article_id');
             $table->integer('tage_id');
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

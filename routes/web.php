@@ -24,6 +24,8 @@ Route::group(['middleware'=>'auth','namespace'=>'Admin'],function()
 	Route::any('wordconfig','WordController@config')->name('wordconfig');
 	Route::any('image','ImageController@index')->name('image');
 	Route::any('tages','TageController@index')->name('tages');
+	Route::post('update_tages','TageController@update_tages');
+	Route::post('tages_delete','TageController@tages_delete');
 });
 
 // Auth::routes();

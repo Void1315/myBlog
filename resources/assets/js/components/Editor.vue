@@ -1,12 +1,17 @@
 <template>
-    <div style="min-width: 666px;">
+  <el-card class="box-card">
+    <div >
       <div class="title-box">
         <textarea placeholder="请输入标题"></textarea>
       </div>
+
+      <y-add-tage></y-add-tage>
+      
       <div id="editorElem" style="text-align:left"></div>
       <input type="hidden" name="content" v-model="editorContent">
       <el-button type="primary" size="large">发布文章</el-button>
     </div>
+  </el-card>
 </template>
 <script>
     import E from 'wangeditor'

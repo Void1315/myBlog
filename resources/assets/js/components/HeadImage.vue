@@ -51,7 +51,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
 .el-upload
 {
     width: 100%;

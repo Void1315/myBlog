@@ -26,8 +26,10 @@
 							</div>
 						</div>
 						<footer class="article-footer tage-box" id="app">
+						@if($article->tage_content)
 							<i class="icon ion-ios-pricetags tage-head"></i>
 							<tage mmessage="{{$article->tage_content}}" color="{{$article->color}}"></tage>
+							@endif
 						</footer>
 					</article>
 				@endforeach
